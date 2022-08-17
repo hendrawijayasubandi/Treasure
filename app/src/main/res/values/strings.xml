@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Treasure</string>
+    <string name="member_treasure">Member Treasure</string>
+    <string name="treasure">Treasure</string>
+    <string name="about_me">About Me</string>
+    <string name="hendra_wijaya_subandi">Hendra Wijaya Subandi</string>
+    <string name="email">piksi.hendra.19402084@gmail.com</string>
+    <string name="detail">detail</string>
+    <string name="add_my_bias">Add My Bias</string>
+</resources>
