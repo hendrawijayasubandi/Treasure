@@ -27,6 +27,19 @@ object MembersData {
         "",
         "")
 
+    private val memberFacts = arrayOf("",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "")
+
     private val membersImages = intArrayOf(R.drawable.choi_hyunsuk,
         R.drawable.park_jihoon,
         R.drawable.yoshi,
@@ -47,6 +60,7 @@ object MembersData {
                 val member = Member()
                 member.name = memberNames[position]
                 member.detail = memberDetails[position]
+                member.facts = memberFacts[position]
                 member.photo = membersImages[position]
                 list.add(member)
             }

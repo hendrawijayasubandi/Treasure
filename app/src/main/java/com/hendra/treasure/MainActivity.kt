@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar?.title = "My Treasure"
+
         val btnAboutMe: Button = findViewById(R.id.btn_about_me)
         btnAboutMe.setOnClickListener(this)
 

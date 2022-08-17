@@ -18,6 +18,8 @@ class MemberTreasure : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_member_treasure)
 
+        supportActionBar?.title = "Member Treasure"
+
         recyclerView = findViewById(R.id.rv_members)
         recyclerView.setHasFixedSize(true)
 
