@@ -17,7 +17,6 @@ class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : Recycle
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
         var tvDetail: TextView = itemView.findViewById(R.id.tv_item_detail)
         var btnAddMyBias: Button = itemView.findViewById(R.id.btn_add_my_bias)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewViewHolder {

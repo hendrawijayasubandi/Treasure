@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val btnMemberTreasure: Button = findViewById(R.id.btn_member_treasure)
         btnMemberTreasure.setOnClickListener(this)
+
+        val btnMyTreasure: Button = findViewById(R.id.btn_my_treasure)
+        btnMyTreasure.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -30,6 +33,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_member_treasure -> {
                 val moveIntent = Intent(this@MainActivity, MemberTreasure::class.java)
+                startActivity(moveIntent)
+            }
+            R.id.btn_my_treasure -> {
+                val moveIntent = Intent(this@MainActivity, FavoriteActivity::class.java)
                 startActivity(moveIntent)
             }
         }
