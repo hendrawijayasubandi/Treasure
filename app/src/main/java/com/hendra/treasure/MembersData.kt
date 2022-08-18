@@ -1,17 +1,17 @@
 package com.hendra.treasure
 
 object MembersData {
-    private val memberNames = arrayOf("Choi Hyunsuk (최현석)",
-        "Park Jihoon (박지훈)",
+    private val memberNames = arrayOf("Choi Hyun Suk (최현석)",
+        "Park Ji Hoon (박지훈)",
         "Kanemoto Yoshinori (金本芳典)",
         "Kim Jun Kyu (김준규)",
         "Takata Mashiho (高田ましほ)",
         "Yoon Jae Hyuk (윤재혁)",
         "Hamada Asahi (浜田朝光)",
-        "Bang Yedam (방예담)",
-        "Kim Doyoung (김도영)",
+        "Bang Ye Dam (방예담)",
+        "Kim Do Young (김도영)",
         "Watanabe Haruto (渡辺春虎)",
-        "Park Jeongwoo (박정우)",
+        "Park Jeong Woo (박정우)",
         "Song Jung Hwan (소정환)")
 
     private val memberDetails = arrayOf("Birth Name: Choi Hyun Suk (최현석) \nEnglish Name: Daniel Choi \nPossible Position: Leader, Main Rapper, Main Dancer \nBirthday: April 21st, 1999 \nZodiac Sign: Taurus \nHeight: 169 cm (5’6.5″) \nWeight: 58 kg (128 lbs) \nBlood Type: A \nMBTI Type: ENFP \nGemstone: Garnet (January Gemstone ~ 1st Member = Eldest) – Meaning Loyalty and Protection \nNationality: Korean",
