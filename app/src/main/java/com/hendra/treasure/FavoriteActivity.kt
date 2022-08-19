@@ -25,7 +25,7 @@ class FavoriteActivity : AppCompatActivity() {
 
     private fun showRV() {
         recyclerView.layoutManager = LinearLayoutManager(this)
-        val listHeroAdapter = CardViewMemberAdapter(list)
-        recyclerView.adapter = listHeroAdapter
+        val listMemberAdapter = CardViewMemberAdapter(list)
+        recyclerView.adapter = listMemberAdapter
     }
 }

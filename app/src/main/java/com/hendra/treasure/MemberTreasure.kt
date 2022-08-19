@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -29,7 +30,20 @@ class MemberTreasure : AppCompatActivity() {
 
     private fun showRV() {
         recyclerView.layoutManager = LinearLayoutManager(this)
-        val listHeroAdapter = CardViewMemberAdapter(list)
-        recyclerView.adapter = listHeroAdapter
+        val listMemberAdapter = CardViewMemberAdapter(list)
+        recyclerView.adapter = listMemberAdapter
+
+        listMemberAdapter.setOnItemClickCallback(object : CardViewMemberAdapter.OnItemClickCallback {
+            override fun onItemClicked(member: Member) {
+                val moveIntentDetail = Intent(this@MemberTreasure, DetailActivity::class.java)
+                moveIntentDetail.putExtra("Data", member)
+                startActivity(moveIntentDetail)
+                showSelectedMember(member)
+            }
+        })
+    }
+
+    private fun showSelectedMember(member: Member) {
+        Toast.makeText(this, "Kamu Memilih da"+member.name, Toast.LENGTH_SHORT).show()
     }
 }

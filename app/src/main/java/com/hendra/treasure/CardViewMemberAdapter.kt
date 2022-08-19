@@ -17,6 +17,12 @@ class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : Recycle
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
         var tvDetail: TextView = itemView.findViewById(R.id.tv_item_detail)
         var btnAddMyBias: Button = itemView.findViewById(R.id.btn_add_my_bias)
+
+        private lateinit var onItemClickCallback: OnItemClickCallback
+
+        fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+            this.onItemClickCallback = onItemClickCallback
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewViewHolder {
@@ -25,6 +31,7 @@ class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : Recycle
     }
 
     override fun onBindViewHolder(holder: CardViewViewHolder, position: Int) {
+        holder.bind(listMember[position])
         val member = listMember[position]
         Glide.with(holder.itemView.context)
             .load(member.photo)
@@ -34,9 +41,20 @@ class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : Recycle
         holder.tvDetail.text = member.detail
         holder.btnAddMyBias.setOnClickListener { Toast.makeText(holder.itemView.context, "Berhasil menambahkan " + listMember[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
         holder.itemView.setOnClickListener { Toast.makeText(holder.itemView.context, "Kamu memilih " + listMember[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
+        val (name, detail, facts, photo) = listMember[position]
+        holder.imgPhoto.setImageResource(photo)
+        holder.tvName.text = name
+        holder.tvDetail.text = detail
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(listMember[holder.adapterPosition])
+        }
     }
 
     override fun getItemCount(): Int {
         return listMember.size
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(member: Member)
     }
 }
