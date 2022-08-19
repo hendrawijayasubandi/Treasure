@@ -41,6 +41,7 @@ class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : Recycle
         holder.tvDetail.text = member.detail
         holder.btnAddMyBias.setOnClickListener { Toast.makeText(holder.itemView.context, "Berhasil menambahkan " + listMember[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
         holder.itemView.setOnClickListener { Toast.makeText(holder.itemView.context, "Kamu memilih " + listMember[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
+
         val (name, detail, facts, photo) = listMember[position]
         holder.imgPhoto.setImageResource(photo)
         holder.tvName.text = name
