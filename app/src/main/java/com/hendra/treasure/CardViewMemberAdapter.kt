@@ -22,7 +22,7 @@ class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : Recycle
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
         var tvDetail: TextView = itemView.findViewById(R.id.tv_item_detail)
-        var btnAddMyBias: Button = itemView.findViewById(R.id.btn_add_my_bias)
+
 
         private lateinit var onItemClickCallback: OnItemClickCallback
 
@@ -44,7 +44,6 @@ class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : Recycle
             .into(holder.imgPhoto)
         holder.tvName.text = member.name
         holder.tvDetail.text = member.detail
-        holder.btnAddMyBias.setOnClickListener { Toast.makeText(holder.itemView.context, "Berhasil menambahkan " + listMember[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
         holder.itemView.setOnClickListener { Toast.makeText(holder.itemView.context, "Kamu memilih " + listMember[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
 
         val (name, detail, facts, photo) = listMember[position]

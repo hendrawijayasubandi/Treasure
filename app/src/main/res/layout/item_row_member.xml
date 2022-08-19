@@ -50,7 +50,7 @@
             android:layout_toEndOf="@id/img_item_photo"
             android:layout_toRightOf="@id/img_item_photo"
             android:ellipsize="end"
-            android:maxLines="5"
+            android:maxLines="7"
             tools:text="@string/detail" />
         <LinearLayout
             android:id="@+id/layout_button"
@@ -62,14 +62,6 @@
             android:layout_toEndOf="@id/img_item_photo"
             android:layout_toRightOf="@id/img_item_photo"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/btn_add_my_bias"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/add_my_bias"
-                android:textSize="12sp" />
         </LinearLayout>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
