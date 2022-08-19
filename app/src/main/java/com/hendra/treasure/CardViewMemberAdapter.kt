@@ -12,6 +12,12 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : RecyclerView.Adapter<CardViewMemberAdapter.CardViewViewHolder>() {
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
     inner class CardViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
@@ -31,7 +37,6 @@ class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : Recycle
     }
 
     override fun onBindViewHolder(holder: CardViewViewHolder, position: Int) {
-        holder.bind(listMember[position])
         val member = listMember[position]
         Glide.with(holder.itemView.context)
             .load(member.photo)
@@ -49,6 +54,7 @@ class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : Recycle
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(listMember[holder.adapterPosition])
         }
+        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listMember[holder.adapterPosition]) }
     }
 
     override fun getItemCount(): Int {

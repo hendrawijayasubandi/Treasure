@@ -44,6 +44,6 @@ class MemberTreasure : AppCompatActivity() {
     }
 
     private fun showSelectedMember(member: Member) {
-        Toast.makeText(this, "Kamu Memilih da"+member.name, Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Kamu Memilih "+member.name, Toast.LENGTH_SHORT).show()
     }
 }
