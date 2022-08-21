@@ -10,12 +10,12 @@ import com.hendra.treasure.databinding.ActivityDetailBinding
 class DetailActivity : AppCompatActivity() {
     private lateinit var detailBinding: ActivityDetailBinding
 
-    companion object {
-        const val EXTRA_NAME = "extra_name"
-        const val EXTRA_DETAIL = "extra_detail"
-        const val EXTRA_FACTS = "extra_facts"
-        const val EXTRA_PICTURES = "extra_pictures"
-    }
+//    companion object {
+//        const val EXTRA_NAME = "extra_name"
+//        const val EXTRA_DETAIL = "extra_detail"
+//        const val EXTRA_FACTS = "extra_facts"
+//        const val EXTRA_PICTURES = "extra_pictures"
+//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,5 +37,6 @@ class DetailActivity : AppCompatActivity() {
         detailBinding.tvItemName.text = data?.name
         detailBinding.tvItemDetail.text = data?.detail
         detailBinding.tvItemFacts.text = data?.facts
+
     }
 }

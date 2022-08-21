@@ -50,7 +50,7 @@
                 android:layout_toEndOf="@id/img_item_photo"
                 android:layout_toRightOf="@id/img_item_photo"
                 android:ellipsize="end"
-                android:maxLines="5"
+                android:maxLines="10"
                 tools:text="@string/detail" />
         </RelativeLayout>
 
