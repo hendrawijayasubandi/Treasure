@@ -46,7 +46,6 @@ class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : Recycle
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(listMember[holder.adapterPosition])
         }
-        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listMember[holder.adapterPosition]) }
     }
 
     override fun getItemCount(): Int {
