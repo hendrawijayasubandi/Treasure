@@ -22,12 +22,6 @@ class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : Recycle
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
         var tvDetail: TextView = itemView.findViewById(R.id.tv_item_detail)
-
-        private lateinit var onItemClickCallback: OnItemClickCallback
-
-        fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
-            this.onItemClickCallback = onItemClickCallback
-        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewViewHolder {
