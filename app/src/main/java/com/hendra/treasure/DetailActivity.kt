@@ -10,20 +10,11 @@ import com.hendra.treasure.databinding.ActivityDetailBinding
 class DetailActivity : AppCompatActivity() {
     private lateinit var detailBinding: ActivityDetailBinding
 
-//    companion object {
-//        const val EXTRA_NAME = "extra_name"
-//        const val EXTRA_DETAIL = "extra_detail"
-//        const val EXTRA_FACTS = "extra_facts"
-//        const val EXTRA_PICTURES = "extra_pictures"
-//    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         detailBinding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(detailBinding.root)
-        supportActionBar?.title = "Detail Member"
-        setContentView(R.layout.activity_detail)
 
         supportActionBar?.title = "Detail Member"
 

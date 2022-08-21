@@ -30,10 +30,10 @@ class MemberTreasure : AppCompatActivity() {
 
     private fun showRV() {
         recyclerView.layoutManager = LinearLayoutManager(this)
-        val listMemberAdapter = CardViewMemberAdapter(list)
-        recyclerView.adapter = listMemberAdapter
+        val listHeroAdapter = CardViewMemberAdapter(list)
+        recyclerView.adapter = listHeroAdapter
 
-        listMemberAdapter.setOnItemClickCallback(object : CardViewMemberAdapter.OnItemClickCallback {
+        listHeroAdapter.setOnItemClickCallback(object : CardViewMemberAdapter.OnItemClickCallback {
             override fun onItemClicked(member: Member) {
                 val moveIntentDetail = Intent(this@MemberTreasure, DetailActivity::class.java)
                 moveIntentDetail.putExtra("Data", member)

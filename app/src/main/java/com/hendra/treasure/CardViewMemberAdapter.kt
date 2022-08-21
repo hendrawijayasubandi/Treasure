@@ -31,6 +31,7 @@ class CardViewMemberAdapter(private val listMember: ArrayList<Member>) : Recycle
 
     override fun onBindViewHolder(holder: CardViewViewHolder, position: Int) {
         val member = listMember[position]
+
         Glide.with(holder.itemView.context)
             .load(member.photo)
             .apply(RequestOptions().override(350, 550))

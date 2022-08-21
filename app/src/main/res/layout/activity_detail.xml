@@ -51,6 +51,7 @@
                 android:layout_toRightOf="@id/img_item_photo"
                 android:ellipsize="end"
                 android:maxLines="10"
+                android:textSize="13sp"
                 tools:text="@string/detail" />
         </RelativeLayout>
 
@@ -58,7 +59,7 @@
             android:id="@+id/tv_item_facts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
+            android:layout_marginTop="16dp"
             android:text="@string/facts" />
     </LinearLayout>
 </ScrollView>
